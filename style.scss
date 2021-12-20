@@ -358,8 +358,11 @@ $white: #ffffff;
 $dark-grey: #3B3B3B;
 $green: #09cc8e;
 $grey: #E3E0F3;
+$value: #868686;
 
+/*------COLOR_GRADIENTS-------*/
 
+$violet: #9f69fe;
 
 /*------MY CSS-----*/
 
@@ -387,7 +390,7 @@ ol {
 
 #head {
     background-color: $grey;   
-    padding: 1.5% 5%;
+    padding: .3% 5%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -399,10 +402,76 @@ ol {
 #h1 {
     color: $green;
     margin: 0;
-    outline: solid red;
+    font-size: 3em;
 }
 
 
 /*------HEAD-DIV_SEARCH------*/
 
 
+#head .head-div_search {
+  padding: .3% 3%;
+  display: flex;
+  min-width: 23%;
+  text-align: center;
+}
+
+
+/*-------SEARCH-BUTTON-------*/
+
+#head .head-div_search #search {
+  background:linear-gradient(-45deg, #3f00b5, $violet, $green, #3f00b5);
+  border: none;
+  background-size: 800% 400%;
+  padding: 4%;
+  display: flex;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+  transition: all .5s ease-in-out;
+  margin-right: 3.5%;
+  animation-name: gradient;
+  animation-timing-function: cubic-bezier(.62, .28, .23, .99);
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  align-items: center;
+}
+
+#head .head-div_search #search:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+ }
+
+ button:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+ }
+ 
+ @keyframes gradient {
+  0% {
+   background-position: 0% 50%;
+  }
+ 
+  50% {
+   background-position: 100% 50%;
+  }
+ 
+  100% {
+   background-position: 0% 50%;
+  }
+ }
+
+
+
+ /*------SEARCH_BAR-------*/
+
+#head .head-div_search #searchbar {
+  border: 1px solid;
+  border-radius: 10px;
+  padding-left: 4%;
+  font-size: 1em;
+  color: $value;
+  background-color: $grey;
+}
+ 
