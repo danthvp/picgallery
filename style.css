@@ -6,7 +6,6 @@
 }
 
 /*------COLOR VARIABLES-----*/
-/*------COLOR_GRADIENTS-------*/
 /*------MY CSS-----*/
 body {
   background: url(img/bg-gradient.png);
@@ -38,10 +37,14 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
 #h1 {
-  color: #E3E0F3;
+  color: #e3e0f3;
   margin: 0;
   font-size: 3em;
 }
@@ -58,7 +61,7 @@ ol {
 
 /*-------SEARCH-BUTTON-------*/
 #head .head-div_search #search {
-  background: linear-gradient(-45deg, #340194, #9f69fe, #09cc8e);
+  background: linear-gradient(-45deg, #340194, #9f69fe, #09ce8f);
   border: none;
   background-size: 800% 400%;
   padding: 4%;
@@ -83,13 +86,14 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 #head .head-div_search #search:hover {
   -webkit-animation: gradient 3s infinite;
           animation: gradient 3s infinite;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 button:active {
@@ -130,7 +134,7 @@ button:active {
   padding-left: 4%;
   font-size: 1em;
   color: #868686;
-  background-color: #E3E0F3;
+  background-color: #e3e0f3;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -160,26 +164,98 @@ button:active {
 /*------LI-----*/
 #head .head-div_menu .menu li {
   padding: 1% 2%;
-  border: 1px solid #E3E0F3;
+  border: 1px solid #e3e0f3;
   border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 #head .head-div_menu .menu li:hover {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
-  -webkit-transition: 700ms;
-  transition: 700ms;
-  background: linear-gradient(-45deg, #340194, #9f69fe, #09cc8e);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background: linear-gradient(-45deg, #340194, #9f69fe, #09ce8f);
   border: none;
 }
 
 /*-----A-----*/
 #head .head-div_menu .menu li a {
-  color: #E3E0F3;
+  color: #e3e0f3;
   font-size: 1.3em;
 }
 
-#head .head-div_menu .menu li a:hover {
+/*---------MAIN----------*/
+#main {
+  padding: 25% 5% 5% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 10px solid red;
+}
+
+/*-----FLEX_CONTAINER------*/
+#main .container {
+  display: inherit;
+  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+/*--------IMG_CONTAINER-------*/
+#main .container .div_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  height: 100%;
+  border: 1px solid #141414;
+  position: relative;
+}
+
+#main .container .div_img img {
+  width: 100%;
+  image-rendering: optimizeQuality;
+  cursor: pointer;
+}
+
+/*-----------SPAN-------*/
+#main .container .div_img .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background-color: rgba(59, 59, 59, 0.68);
+  color: #e3e0f3;
+  width: 100%;
+  height: 9%;
+  bottom: 0;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.1em;
   font-weight: bold;
+  visibility: hidden;
+  margin-bottom: -3%;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+#main .container .div_img:hover .title {
+  visibility: visible;
+  margin: 0;
+  opacity: .77;
+  text-shadow: 3.5px 3.5px 8.2px rgba(227, 224, 243, 0.038), 9.8px 9.8px 22.5px rgba(227, 224, 243, 0.055), 23.5px 23.5px 54.3px rgba(227, 224, 243, 0.072), 78px 78px 180px rgba(227, 224, 243, 0.11);
 }
 /*# sourceMappingURL=style.css.map */

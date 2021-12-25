@@ -12,17 +12,13 @@
 
 $white: #ffffff;
 $dark-grey: #3B3B3B;
-$green: #09cc8e;
-$grey: #E3E0F3;
+$green: rgb(9, 206, 143);
+$grey: rgb(227, 224, 243);
 $value: #868686;
-
-
-
-
-
-/*------COLOR_GRADIENTS-------*/
-
 $violet: #9f69fe;
+$dark-grey_b: rgba(59, 59, 59, .680);
+
+
 
 
 
@@ -60,6 +56,10 @@ ol {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
 }
 
 
@@ -102,11 +102,12 @@ ol {
   animation-iteration-count: infinite;
   animation-duration: 10s;
   align-items: center;
+  cursor: pointer;
 }
 
 #head .head-div_search #search:hover {
   animation: gradient 3s infinite;
-  transform: scale(1.05);
+  transform: scale(1.08);
  }
 
  button:active {
@@ -172,11 +173,13 @@ ol {
   padding: 1% 2%;
   border: 1px solid $grey;
   border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 #head .head-div_menu .menu li:hover {
   transform: scale(1.08);
-  transition: 700ms;
+  transition: 400ms;
   background: linear-gradient(-45deg, #340194, $violet, $green);
   border: none;
 }
@@ -188,6 +191,83 @@ ol {
   font-size: 1.3em;
 }
 
-#head .head-div_menu .menu li a:hover {
-  font-weight: bold;
+
+
+
+
+
+
+
+/*---------MAIN----------*/
+
+#main {
+  padding: 25% 5% 5% 5%;
+  display: flex;
+  outline: 10px solid red;
 }
+
+
+
+
+/*-----FLEX_CONTAINER------*/
+
+#main .container {
+  display: inherit;
+  height: 100%;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+
+/*--------IMG_CONTAINER-------*/
+
+#main .container .div_img {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  border: 1px solid rgb(20, 20, 20);
+  position: relative;
+}
+
+
+#main .container .div_img img {
+  width: 100%;
+  image-rendering: optimizeQuality;
+  cursor: pointer;
+}
+
+
+/*-----------SPAN-------*/
+
+#main .container .div_img .title {
+  display: flex;
+  position: absolute;
+  background-color: $dark-grey_b;
+  color: $grey;
+  width: 100%;
+  height: 9%;
+  bottom: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: bold; 
+  visibility: hidden;
+  margin-bottom: -3%;
+  transition: 0.2s ease-in-out;
+  transition-delay: 0s;
+}
+
+#main .container .div_img:hover .title {
+  visibility: visible;
+  margin: 0;
+  opacity: .77;
+  text-shadow:
+  3.5px 3.5px 8.2px rgba(227, 224, 243, 0.038),
+  9.8px 9.8px 22.5px rgba(227, 224, 243, 0.055),
+  23.5px 23.5px 54.3px rgba(227, 224, 243, 0.072),
+  78px 78px 180px rgba(227, 224, 243, 0.11)
+;
+;
+} 
+
