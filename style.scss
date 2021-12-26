@@ -1,13 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-
-
-
-
 /*------COLOR VARIABLES-----*/
 
 $white: #ffffff;
@@ -17,6 +7,21 @@ $grey: rgb(227, 224, 243);
 $value: #868686;
 $violet: #9f69fe;
 $dark-grey_b: rgba(59, 59, 59, .680);
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-color: $green;
+}
+
+
+
+
+
 
 
 
@@ -45,6 +50,17 @@ ol {
     list-style: none;
 }
 
+h2 {
+  color: $grey;
+  font-size: 2em;
+}
+
+p {
+  color: whitesmoke;
+  font-size: 1.25em;
+}
+
+
 
 
 
@@ -53,15 +69,15 @@ ol {
 #head {
     background-color: transparent;   
     padding: .3% 5%;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    z-index: 1;
 }
-
 
 
 
@@ -201,11 +217,23 @@ ol {
 /*---------MAIN----------*/
 
 #main {
-  padding: 25% 5% 5% 5%;
+  padding: 15% 5% 5% 5%;
   display: flex;
-  outline: 10px solid red;
+  flex-flow: row wrap;
+  border: 2px solid green;
 }
 
+
+/*--------SECTION---------*/
+
+#main .welcome {
+  outline: solid red;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  width: 100%;
+  margin-bottom: 10%;
+}
 
 
 
@@ -214,8 +242,8 @@ ol {
 #main .container {
   display: inherit;
   height: 100%;
-  align-items: flex-start;
   flex-flow: row wrap;
+  border: solid blue;
 }
 
 
@@ -223,7 +251,7 @@ ol {
 
 #main .container .div_img {
   display: flex;
-  width: 40%;
+  width: calc(100%/3);
   height: 100%;
   border: 1px solid rgb(20, 20, 20);
   position: relative;
@@ -245,15 +273,14 @@ ol {
   background-color: $dark-grey_b;
   color: $grey;
   width: 100%;
-  height: 9%;
+  height: 1.3em;
   bottom: 0;
-  overflow: hidden;
   justify-content: center;
   align-items: center;
   font-size: 1.1em;
   font-weight: bold; 
   visibility: hidden;
-  margin-bottom: -3%;
+  margin-bottom: -2%;
   transition: 0.2s ease-in-out;
   transition-delay: 0s;
 }
