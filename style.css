@@ -9,7 +9,7 @@
 
 /*------MY CSS-----*/
 body {
-  background: url(img/bg-gradient.png);
+  background: whitesmoke;
   background-size: cover;
   background-repeat: no-repeat;
   color: #3B3B3B;
@@ -27,12 +27,12 @@ ol {
 }
 
 h2 {
-  color: #e3e0f3;
+  color: #1f1f1f;
   font-size: 2em;
 }
 
 p {
-  color: whitesmoke;
+  color: #1f1f1f;
   font-size: 1.25em;
 }
 
@@ -56,7 +56,7 @@ p {
 }
 
 #h1 {
-  color: #e3e0f3;
+  color: #1f1f1f;
   margin: 0;
   font-size: 3em;
 }
@@ -199,7 +199,7 @@ button:active {
 
 /*---------MAIN----------*/
 #main {
-  padding: 15% 5% 5% 5%;
+  padding: 10% 0% 5% 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,6 +212,9 @@ button:active {
 
 /*--------SECTION---------*/
 #main .welcome {
+  background: url(img/bg-gradient.png);
+  background-size: cover;
+  background-position: center center;
   outline: solid red;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,67 +228,42 @@ button:active {
           flex-flow: column wrap;
   width: 100%;
   margin-bottom: 10%;
+  padding: 10%;
 }
 
 /*-----FLEX_CONTAINER------*/
 #main .container {
   display: inherit;
   height: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border: solid blue;
 }
 
-/*--------IMG_CONTAINER-------*/
-#main .container .div_img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: calc(100%/3);
-  height: 100%;
-  border: 1px solid #141414;
-  position: relative;
+#main .container .img_container {
+  -webkit-box-flex: 25%;
+      -ms-flex: 25%;
+          flex: 25%;
+  margin: .5%;
 }
 
-#main .container .div_img img {
+#main .container .img_container img {
   width: 100%;
-  image-rendering: optimizeQuality;
-  cursor: pointer;
 }
 
-/*-----------SPAN-------*/
-#main .container .div_img .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  background-color: rgba(59, 59, 59, 0.68);
-  color: #e3e0f3;
-  width: 100%;
-  height: 1.3em;
-  bottom: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.1em;
-  font-weight: bold;
-  visibility: hidden;
-  margin-bottom: -2%;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+@media (max-width: 900px) {
+  #main .container .img_container {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+  }
 }
 
-#main .container .div_img:hover .title {
-  visibility: visible;
-  margin: 0;
-  opacity: .77;
-  text-shadow: 3.5px 3.5px 8.2px rgba(227, 224, 243, 0.038), 9.8px 9.8px 22.5px rgba(227, 224, 243, 0.055), 23.5px 23.5px 54.3px rgba(227, 224, 243, 0.072), 78px 78px 180px rgba(227, 224, 243, 0.11);
+@media (max-width: 600px) {
+  #main .container .img_container {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
