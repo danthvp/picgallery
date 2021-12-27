@@ -28,7 +28,7 @@ ol {
 
 h2 {
   color: #1f1f1f;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 p {
@@ -38,9 +38,9 @@ p {
 
 /*------HEADER------*/
 #head {
-  background-color: transparent;
+  background-color: #03a773;
   padding: .3% 5%;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,14 +49,14 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  /*position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;*/
 }
 
 #h1 {
-  color: #1f1f1f;
+  color: #e3e0f3;
   margin: 0;
   font-size: 3em;
 }
@@ -84,9 +84,9 @@ p {
   font-size: 1.2em;
   font-weight: 700;
   color: white;
+  margin-right: 3.5%;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  margin-right: 3.5%;
   -webkit-animation-name: gradient;
           animation-name: gradient;
   -webkit-animation-timing-function: cubic-bezier(0.62, 0.28, 0.23, 0.99);
@@ -180,6 +180,8 @@ button:active {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 #head .head-div_menu .menu li:hover {
@@ -199,7 +201,7 @@ button:active {
 
 /*---------MAIN----------*/
 #main {
-  padding: 10% 0% 5% 0%;
+  /*padding: 0% 0% 5% 0%;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,37 +209,56 @@ button:active {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  border: 2px solid green;
+  /* border: 2px solid green;*/
 }
 
 /*--------SECTION---------*/
 #main .welcome {
-  background: url(img/bg-gradient.png);
-  background-size: cover;
-  background-position: center center;
-  outline: solid red;
+  background-color: #03a773;
+  width: 100%;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  width: 100%;
-  margin-bottom: 10%;
-  padding: 10%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+#main .welcome h2 {
+  margin-top: 5%;
+}
+
+#main .welcome h2,
+#main .welcome p {
+  /*outline: solid green;*/
+  color: #e3e0f3;
+  z-index: 1;
+}
+
+#main .welcome svg {
+  position: absolute;
+  bottom: 0;
 }
 
 /*-----FLEX_CONTAINER------*/
 #main .container {
   display: inherit;
   height: 100%;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  -webkit-box-shadow: 1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054), 3px 0.8px 58.3px rgba(0, 0, 0, 0.067), 5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074), 9px 2.5px 93.5px rgba(0, 0, 0, 0.076), 14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076), 22px 6.1px 106.3px rgba(0, 0, 0, 0.074), 36px 10px 109px rgba(0, 0, 0, 0.07);
+          box-shadow: 1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054), 3px 0.8px 58.3px rgba(0, 0, 0, 0.067), 5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074), 9px 2.5px 93.5px rgba(0, 0, 0, 0.076), 14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076), 22px 6.1px 106.3px rgba(0, 0, 0, 0.074), 36px 10px 109px rgba(0, 0, 0, 0.07);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border: solid blue;
+  /*border: solid blue;*/
 }
 
 #main .container .img_container {
