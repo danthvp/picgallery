@@ -7,7 +7,8 @@ $grey: rgb(227, 224, 243);
 $value: #868686;
 $violet: #9f69fe;
 $dark-grey_b: rgb(59, 59, 59);
-$dark-green: #03a773;;
+$dark-green: #03a773;
+$dark-green_ins: rgba(3, 167, 115, .8);
 $black: #1f1f1f;
 
 
@@ -288,6 +289,89 @@ p {
   width: 100%;
 }
 
+
+
+
+
+/*-------FOOTER-------*/
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10%;
+  padding: 2% 0;
+  background-color: $dark-grey_b;
+  color: $grey;
+}
+
+
+
+
+/*-------SOCIAL MEDIA-------*/
+
+#footer .social-media {
+  display: inherit;
+  width: 50%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2%;
+  padding: 1% 0;
+}
+
+
+/*-----UL-----*/
+
+#footer .social-media>.social_ul {
+  display: inherit;
+  justify-content: inherit;
+  text-align: inherit;
+  width: 100%;
+}
+
+#footer .social-media .social_ul>li {
+  margin: 0 3%;
+  width: 100%;
+}
+
+#footer .social-media .social_ul>li:hover {
+  border-bottom: 1px solid $dark-green;
+  transition: all .5s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 5px 5px 27px -8px $dark-green_ins inset;
+
+}
+
+#footer .social-media .social_ul>li:active,
+#footer .social-media .social_ul li>a:active {
+  color: $green;
+}
+
+/*------ICON-----*/
+
+#footer .social-media .social_ul li>i {
+  margin-right: 5%;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+
+
+
+
+/*----LINKS-----*/
+
+#footer .social-media .social_ul li>a {
+  color: $grey;
+  font-size: 1.1em;
+}
+
+
+/*-------COPYRIGHT--------*/
+#footer .copyright {
+  display: inherit;
+}
 
 @media (max-width: 900px) {
   #main .container .img_container {
