@@ -262,19 +262,22 @@ button:active {
       flex-wrap: wrap;
 }
 
+/* ----- IMG-CONTAINER -------*/
 #main .container .img_container {
   -webkit-box-flex: 25%;
       -ms-flex: 25%;
           flex: 25%;
   margin: .5%;
-  position: relative;
 }
 
+/* ------ SLIDER ------- */
 #main .container .img_container .span_slide {
   width: 100%;
   outline: dotted red;
+  position: relative;
 }
 
+/* ------ IMG ------*/
 #main .container .img_container img {
   width: 100%;
   -webkit-transition: all .5 ease-in-out;
@@ -282,45 +285,49 @@ button:active {
   cursor: pointer;
 }
 
-#main .container .img_container .span-slide:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+#main .container .img_container img:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 
+/* ------- SPAN-INFO -------*/
 #main .container .img_container .span_slide .span-info {
-  background: green;
+  background: rgba(3, 167, 115, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 0;
   position: absolute;
-  width: 0%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
+  height: 0%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 5%;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  padding: 0 0%;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
   text-indent: -9999999px;
 }
 
-#main .container .img_container:hover .span-info {
-  background-color: #3b3b3b;
-  width: 100%;
+#main .container .img_container .span_slide:hover .span-info {
+  background-color: #4d4d4d;
+  height: 3em;
   text-indent: 0;
+  opacity: .7;
 }
 
-#main .container .img_container .span-info_profile,
-#main .container .img_container .span-info_like {
+#main .container .img_container .span_slide .span-info .span-info_profile,
+#main .container .img_container .span_slide .span-info .span-info_like {
   color: #e3e0f3;
   font-weight: bold;
+  margin: 0 2% 2% 2%;
 }
 
-#main .container .img_container .span-info_like:active {
-  color: #d30000;
+#main .container .img_container .span_slide .span-info .span-info_like:active {
+  color: #ff0000;
 }
 
 /*-------FOOTER-------*/
@@ -340,7 +347,7 @@ button:active {
           flex-direction: column;
   margin-top: 10%;
   padding: 2% 0;
-  background-color: #3b3b3b;
+  background-color: #4d4d4d;
   color: #e3e0f3;
 }
 
@@ -352,8 +359,8 @@ button:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 2%;
-  padding: 1% 0;
+  margin: 2% 0;
+  padding: 0% 0;
 }
 
 /*-----UL-----*/
@@ -367,18 +374,18 @@ button:active {
 }
 
 #footer .social-media .social_ul > li {
-  margin: 0 3%;
+  margin: 0;
   width: 100%;
+  height: 0%;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 #footer .social-media .social_ul > li:hover {
-  border-bottom: 1px solid #03a773;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  border-top: 1px solid #03a773;
   -webkit-box-shadow: 5px 5px 27px -8px rgba(3, 167, 115, 0.8) inset;
           box-shadow: 5px 5px 27px -8px rgba(3, 167, 115, 0.8) inset;
+  height: 100%;
 }
 
 #footer .social-media .social_ul > li:active,
@@ -401,9 +408,13 @@ button:active {
 
 /*-------COPYRIGHT--------*/
 #footer .copyright {
-  display: inherit;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 2% 0;
 }
 
+/* ------------ MEDIA QUERY ------------*/
 @media (max-width: 900px) {
   #main .container .img_container {
     -webkit-box-flex: 40%;

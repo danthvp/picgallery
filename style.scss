@@ -8,11 +8,11 @@ $green: #09ce8f;
 $grey: rgb(227, 224, 243);
 $value: #868686;
 $violet: #9f69fe;
-$dark-grey_b: rgb(59, 59, 59);
+$dark-grey_b: rgb(77, 77, 77);
 $dark-green: #03a773;
 $dark-green_ins: rgba(3, 167, 115, .8);
 $black: #1f1f1f;
-$red-like: #d30000;
+$red-like: #ff0000;
 
 
 * {
@@ -282,16 +282,26 @@ p {
   
 }
 
+
+/* ----- IMG-CONTAINER -------*/
+
 #main .container .img_container {
   flex: 25%;
   margin: .5%;
-  position: relative;
+  
 }
+
+/* ------ SLIDER ------- */
 
 #main .container .img_container .span_slide {
   width: 100%;
   outline: dotted red;
+  position: relative;
 }
+
+
+
+/* ------ IMG ------*/
 
 #main .container .img_container img {
   width: 100%;
@@ -299,43 +309,56 @@ p {
   cursor: pointer;
 }
 
-
-
-
-#main .container .img_container .span-slide:active {
-  transform: scale(.95);
+#main .container .img_container img:active{
+  transform: scale(.97);
 }
+
+
+
+
+
+/* ------- SPAN-INFO -------*/
+
 
 
 #main .container .img_container .span_slide .span-info{
-  background: green;
+  background: $dark-green_ins;
   display: flex;
   top: 0;
   position: absolute;
-  width: 0%;
-  align-items: center;
+  width: 100%;
+  height: 0%;
+  align-items: flex-end;
   justify-content: space-between;
-  padding: 0 5%;
-  transition: all .5s ease-in-out;
+  padding: 0 0%;
+  transition: all .8s ease;
   text-indent:  -9999999px;
 }
 
-#main .container .img_container:hover .span-info {
+
+
+#main .container .img_container .span_slide:hover .span-info {
   background-color: $dark-grey_b;
-  width: 100%;
+  height: 3em;
   text-indent: 0;
+  opacity: .7;
 } 
 
-#main .container .img_container .span-info_profile,
-#main .container .img_container .span-info_like {
+#main .container .img_container .span_slide .span-info .span-info_profile,
+#main .container .img_container .span_slide .span-info .span-info_like {
   color: $grey;
   font-weight: bold;
+  margin: 0 2% 2% 2%;
 }
 
 
-#main .container .img_container .span-info_like:active {
+#main .container .img_container .span_slide .span-info .span-info_like:active {
   color: $red-like;
 }
+
+
+
+
 
 
 
@@ -362,8 +385,8 @@ p {
   width: 50%;
   text-align: center;
   justify-content: center;
-  margin-bottom: 2%;
-  padding: 1% 0;
+  margin: 2% 0;
+  padding: 0% 0;
 }
 
 
@@ -377,15 +400,17 @@ p {
 }
 
 #footer .social-media .social_ul>li {
-  margin: 0 3%;
+  margin: 0;
   width: 100%;
+  height: 0%;
   transition: all .3s ease-in-out;
+
 }
 
 #footer .social-media .social_ul>li:hover {
-  border-bottom: 1px solid $dark-green;
-  transform: scale(1.1);
+  border-top: 1px solid $dark-green;
   box-shadow: 5px 5px 27px -8px $dark-green_ins inset;
+  height: 100%;
 
 }
 
@@ -416,8 +441,27 @@ p {
 
 /*-------COPYRIGHT--------*/
 #footer .copyright {
-  display: inherit;
+  display: inline-block;
+  width: 100%;
+  text-align: center; 
+  padding: 2% 0;
 }
+
+
+
+
+
+
+
+
+/* ------------ MEDIA QUERY ------------*/
+
+
+
+
+
+
+
 
 @media (max-width: 900px) {
   #main .container .img_container {
