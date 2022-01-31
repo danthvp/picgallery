@@ -288,6 +288,10 @@ p {
   position: relative;
 }
 
+#main .container .img_container .span_slide {
+  width: 100%;
+  outline: dotted red;
+}
 
 #main .container .img_container img {
   width: 100%;
@@ -295,27 +299,32 @@ p {
   cursor: pointer;
 }
 
-#main .container .img_container img:hover {
 
-}
 
-#main .container .img_container img:active {
+
+#main .container .img_container .span-slide:active {
   transform: scale(.95);
 }
 
 
-#main .container .img_container .span-info {
-  outline: .5px solid red;
-  background: transparent;
+#main .container .img_container .span_slide .span-info{
+  background: green;
   display: flex;
+  top: 0;
   position: absolute;
-  top: 14.2%;
-  width: 100%;
+  width: 0%;
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
+  transition: all .5s ease-in-out;
+  text-indent:  -9999999px;
 }
 
+#main .container .img_container:hover .span-info {
+  background-color: $dark-grey_b;
+  width: 100%;
+  text-indent: 0;
+} 
 
 #main .container .img_container .span-info_profile,
 #main .container .img_container .span-info_like {

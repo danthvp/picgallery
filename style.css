@@ -270,6 +270,11 @@ button:active {
   position: relative;
 }
 
+#main .container .img_container .span_slide {
+  width: 100%;
+  outline: dotted red;
+}
+
 #main .container .img_container img {
   width: 100%;
   -webkit-transition: all .5 ease-in-out;
@@ -277,20 +282,19 @@ button:active {
   cursor: pointer;
 }
 
-#main .container .img_container img:active {
+#main .container .img_container .span-slide:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
 
-#main .container .img_container .span-info {
-  outline: .5px solid red;
-  background: transparent;
+#main .container .img_container .span_slide .span-info {
+  background: green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  top: 0;
   position: absolute;
-  top: 14.2%;
-  width: 100%;
+  width: 0%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -298,6 +302,15 @@ button:active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 5%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  text-indent: -9999999px;
+}
+
+#main .container .img_container:hover .span-info {
+  background-color: #3b3b3b;
+  width: 100%;
+  text-indent: 0;
 }
 
 #main .container .img_container .span-info_profile,
