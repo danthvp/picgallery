@@ -249,85 +249,90 @@ button:active {
   bottom: 0;
 }
 
-/*-----FLEX_CONTAINER------*/
-#main .container {
-  display: inherit;
-  height: 100%;
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  -webkit-box-shadow: 1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054), 3px 0.8px 58.3px rgba(0, 0, 0, 0.067), 5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074), 9px 2.5px 93.5px rgba(0, 0, 0, 0.076), 14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076), 22px 6.1px 106.3px rgba(0, 0, 0, 0.074), 36px 10px 109px rgba(0, 0, 0, 0.07);
-          box-shadow: 1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054), 3px 0.8px 58.3px rgba(0, 0, 0, 0.067), 5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074), 9px 2.5px 93.5px rgba(0, 0, 0, 0.076), 14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076), 22px 6.1px 106.3px rgba(0, 0, 0, 0.074), 36px 10px 109px rgba(0, 0, 0, 0.07);
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-/* ----- IMG-CONTAINER -------*/
-#main .container .img_container {
-  -webkit-box-flex: 25%;
-      -ms-flex: 25%;
-          flex: 25%;
-  margin: .5%;
-}
-
-/* ------ SLIDER ------- */
-#main .container .img_container .span_slide {
-  width: 100%;
-  outline: dotted red;
-  position: relative;
-}
-
-/* ------ IMG ------*/
-#main .container .img_container img {
-  width: 100%;
-  -webkit-transition: all .5 ease-in-out;
-  transition: all .5 ease-in-out;
-  cursor: pointer;
-}
-
-#main .container .img_container img:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-}
-
-/* ------- SPAN-INFO -------*/
-#main .container .img_container .span_slide .span-info {
-  background: rgba(3, 167, 115, 0.8);
+/* ---------- DIV-FLEX ----------- */
+#main .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 0;
-  position: absolute;
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  padding: .15%;
+  -webkit-box-shadow: 1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054), 3px 0.8px 58.3px rgba(0, 0, 0, 0.067), 5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074), 9px 2.5px 93.5px rgba(0, 0, 0, 0.076), 14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076), 22px 6.1px 106.3px rgba(0, 0, 0, 0.074), 36px 10px 109px rgba(0, 0, 0, 0.07);
+          box-shadow: 1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054), 3px 0.8px 58.3px rgba(0, 0, 0, 0.067), 5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074), 9px 2.5px 93.5px rgba(0, 0, 0, 0.076), 14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076), 22px 6.1px 106.3px rgba(0, 0, 0, 0.074), 36px 10px 109px rgba(0, 0, 0, 0.07);
+}
+
+/* ---------- CONTAINER ----------- */
+#main .flex .container {
+  display: inherit;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
-  height: 0%;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  height: 100%;
+}
+
+/* ------------- IMG CONTAINER ---------- */
+#main .flex .container .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  width: 100%;
+  position: relative;
+}
+
+/*IMG*/
+#main .flex .container .img-container > img {
+  width: 100%;
+}
+
+/* ------------- DIV SPAN ----------------*/
+#main .flex .container .img-container > .span {
+  display: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 0%;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease;
-  text-indent: -9999999px;
-}
-
-#main .container .img_container .span_slide:hover .span-info {
+  width: 100%;
+  padding: 1% 7%;
   background-color: #4d4d4d;
+  color: #ffffff;
+  font-size: 1.1em;
+  /*ANIMATION*/
+  position: absolute;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+/*LIKE*/
+#main .flex .container .img-container > .span .like i {
+  cursor: pointer;
+}
+
+/* -----------MAIN ANIMATIONS----------- */
+/*HOVER ANIMATION*/
+#main .flex .container .img-container:hover .span {
   height: 3em;
-  text-indent: 0;
-  opacity: .7;
+  opacity: .65;
 }
 
-#main .container .img_container .span_slide .span-info .span-info_profile,
-#main .container .img_container .span_slide .span-info .span-info_like {
-  color: #e3e0f3;
-  font-weight: bold;
-  margin: 0 2% 2% 2%;
-}
-
-#main .container .img_container .span_slide .span-info .span-info_like:active {
+/*LIKE ACTIVE*/
+#main .flex .container .img-container .span > .like:active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
   color: #ff0000;
+}
+
+/*LIKE HOVER*/
+#main .flex .container .img-container .span .like :hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /*-------FOOTER-------*/

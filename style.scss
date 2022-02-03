@@ -262,104 +262,124 @@ p {
   bottom: 0;
 }
 
-/*-----FLEX_CONTAINER------*/
 
-#main .container {
-  display: inherit;
-  height: 100%;
-  width: 90%;
+
+
+
+/* ---------- DIV-FLEX ----------- */
+
+#main .flex {
+  display: flex;
+  width: 95%;
   height: 100%;
   margin: auto;
+  padding: .15%;
+  
+
   box-shadow:
-  1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054),
-  3px 0.8px 58.3px rgba(0, 0, 0, 0.067),
-  5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074),
-  9px 2.5px 93.5px rgba(0, 0, 0, 0.076),
-  14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076),
-  22px 6.1px 106.3px rgba(0, 0, 0, 0.074),
-  36px 10px 109px rgba(0, 0, 0, 0.07);
+    1.2px 0.3px 19.5px rgba(0, 0, 0, 0.054),
+    3px 0.8px 58.3px rgba(0, 0, 0, 0.067),
+    5.4px 1.5px 80.6px rgba(0, 0, 0, 0.074),
+    9px 2.5px 93.5px rgba(0, 0, 0, 0.076),
+    14.1px 3.9px 101.4px rgba(0, 0, 0, 0.076),
+    22px 6.1px 106.3px rgba(0, 0, 0, 0.074),
+    36px 10px 109px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ---------- CONTAINER ----------- */
+
+#main .flex .container {
+  display: inherit;
   flex-wrap: wrap;
-  
-}
-
-
-/* ----- IMG-CONTAINER -------*/
-
-#main .container .img_container {
-  flex: 25%;
-  margin: .5%;
-  
-}
-
-/* ------ SLIDER ------- */
-
-#main .container .img_container .span_slide {
   width: 100%;
-  outline: dotted red;
+  height: 100%;
+
+}
+
+
+
+
+
+/* ------------- IMG CONTAINER ---------- */
+
+#main .flex .container .img-container {
+  display: flex;
+  flex: 30%;
+  width: 100%;
+
   position: relative;
 }
 
+/*IMG*/
 
-
-/* ------ IMG ------*/
-
-#main .container .img_container img {
+#main .flex .container .img-container>img {
   width: 100%;
-  transition: all .5 ease-in-out;
+}
+
+
+
+
+/* ------------- DIV SPAN ----------------*/
+
+
+#main .flex .container .img-container>.span {
+  display: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1% 7%;
+
+  background-color: $dark-grey_b;
+  color: $white;
+  font-size: 1.1em;
+
+  /*ANIMATION*/
+  position: absolute;
+  height: 0;
+  opacity: 0;
+  transition: all .5s ease;
+
+
+}
+
+
+/*LIKE*/
+
+#main .flex .container .img-container>.span .like i {
   cursor: pointer;
 }
 
-#main .container .img_container img:active {
-  transform: scale(.97);
-}
 
 
 
 
 
-/* ------- SPAN-INFO -------*/
 
 
 
-#main .container .img_container .span_slide .span-info{
-  background: $dark-green_ins;
-  display: flex;
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 0%;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 0 0%;
-  transition: all .8s ease;
-  text-indent:  -9999999px;
-}
+/* -----------MAIN ANIMATIONS----------- */
 
+/*HOVER ANIMATION*/
 
-
-#main .container .img_container .span_slide:hover .span-info {
-  background-color: $dark-grey_b;
+#main .flex .container .img-container:hover .span {
   height: 3em;
-  text-indent: 0;
-  opacity: .7;
-} 
-
-#main .container .img_container .span_slide .span-info .span-info_profile,
-#main .container .img_container .span_slide .span-info .span-info_like {
-  color: $grey;
-  font-weight: bold;
-  margin: 0 2% 2% 2%;
+  opacity: .65;
 }
 
 
-#main .container .img_container .span_slide .span-info .span-info_like:active {
+
+/*LIKE ACTIVE*/
+#main .flex .container .img-container .span>.like:active {
+  transform: scale(1.4);
   color: $red-like;
 }
 
 
-
-
-
+/*LIKE HOVER*/
+#main .flex .container .img-container .span .like :hover {
+  transform: scale(1.2);
+}
 
 
 /*-------FOOTER-------*/
