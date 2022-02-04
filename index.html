@@ -26,7 +26,40 @@
     <nav class="head-div_menu">
         <ul class="menu">
             <li><a href="#">Upload</a></li>      
-            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign In</a>
+                <div id="blur">Blur</div>
+                <div id="signin_popup">
+                    <div class="popup_container">
+                        <h3>Sign In!</h3>
+                        <form class="popup_form">
+                            <label for="Name" class="label_name">Name</label>
+                            <input type="text" name="name" placeholder="Name" class="input_name" required> 
+                                <br/>
+                            <label for="Password" class="label_password">Password</label>
+                            <input type="password" name="Password" placeholder="Password" class="input_password" required>                        
+                        </form>
+                        <nav class="apis">
+                            <ul class="apis_ul">
+                                <li class="apis_li">
+                                    <a href="#">
+                                        <span class="apis_span">Enter with Google</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="apis_span">Enter with Facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="apis_span">Enter with GitHub</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </li>
             <li><a href="#">Create Account</a></li>
         </ul>
     </nav>

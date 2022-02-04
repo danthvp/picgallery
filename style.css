@@ -201,6 +201,94 @@ button:active {
   font-size: 1.15em;
 }
 
+/* ------------ SING IN POP UP -----------*/
+/*Background Gradient*/
+#blur {
+  /*display: none;*/
+  background-color: rgba(0, 0, 0, 0.67);
+  color: transparent;
+  height: 101%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/*Pop Up*/
+#signin_popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*display: none;*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding-top: 3%;
+}
+
+/*Popup Container*/
+#signin_popup .popup_container {
+  background: linear-gradient(-45deg, #340194, #9f69fe, #09ce8f);
+  border-radius: 5%;
+  -webkit-box-shadow: 2.3px 1.6px 1.9px rgba(0, 0, 0, 0.031), 5.3px 3.8px 4.3px rgba(0, 0, 0, 0.045), 9.5px 6.9px 7.7px rgba(0, 0, 0, 0.055), 15.7px 11.4px 12.8px rgba(0, 0, 0, 0.065), 25.9px 18.8px 21.2px rgba(0, 0, 0, 0.075), 45.3px 32.8px 37px rgba(0, 0, 0, 0.089), 98px 71px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 2.3px 1.6px 1.9px rgba(0, 0, 0, 0.031), 5.3px 3.8px 4.3px rgba(0, 0, 0, 0.045), 9.5px 6.9px 7.7px rgba(0, 0, 0, 0.055), 15.7px 11.4px 12.8px rgba(0, 0, 0, 0.065), 25.9px 18.8px 21.2px rgba(0, 0, 0, 0.075), 45.3px 32.8px 37px rgba(0, 0, 0, 0.089), 98px 71px 80px rgba(0, 0, 0, 0.12);
+  height: 70%;
+  width: 35%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*Popup Header*/
+#signin_popup .popup_container h3 {
+  color: #ffffff;
+  font-size: 2em;
+  margin-bottom: 1%;
+}
+
+/*FORM*/
+#signin_popup .popup_container .popup_form {
+  border: solid green;
+  width: 70%;
+  margin-bottom: 4%;
+}
+
+/*Labels*/
+#signin_popup .popup_container .popup_form label {
+  font-size: 1.2em;
+  margin-right: 2%;
+  color: #3B3B3B;
+}
+
+/*Inputs*/
+#signin_popup .popup_container .popup_form input {
+  border: 1px solid #ffffff;
+  color: #3B3B3B;
+  font-weight: bold;
+  padding: 1.5%;
+  border-radius: 10px;
+  background-color: #e3e0f3;
+}
+
 /*---------MAIN----------*/
 #main {
   /*padding: 0% 0% 5% 0%;*/
