@@ -186,15 +186,12 @@ button:active {
   transition: all .4s ease-in-out;
 }
 
-#head .head-div_menu .menu li:hover {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
-  -webkit-transition: 400ms;
+/*#head .head-div_menu .menu li:hover {
+  transform: scale(1.08);
   transition: 400ms;
-  background: linear-gradient(-45deg, #340194, #9f69fe, #09ce8f);
+  background: linear-gradient(-45deg, #340194, $violet, $green);
   border: none;
-}
-
+}*/
 /*-----A-----*/
 #head .head-div_menu .menu li a {
   color: #e3e0f3;
@@ -232,6 +229,7 @@ button:active {
   left: 0;
   z-index: 3;
   padding-top: 3%;
+  cursor: default;
 }
 
 /*Popup Container*/
@@ -242,7 +240,7 @@ button:active {
           box-shadow: 2.3px 1.6px 1.9px rgba(0, 0, 0, 0.031), 5.3px 3.8px 4.3px rgba(0, 0, 0, 0.045), 9.5px 6.9px 7.7px rgba(0, 0, 0, 0.055), 15.7px 11.4px 12.8px rgba(0, 0, 0, 0.065), 25.9px 18.8px 21.2px rgba(0, 0, 0, 0.075), 45.3px 32.8px 37px rgba(0, 0, 0, 0.089), 98px 71px 80px rgba(0, 0, 0, 0.12);
   height: 70%;
   width: 35%;
-  padding: 0;
+  padding-bottom: 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,14 +260,13 @@ button:active {
 #signin_popup .popup_container h3 {
   color: #ffffff;
   font-size: 2em;
-  margin-bottom: 1%;
+  padding-bottom: .5%;
 }
 
 /*FORM*/
 #signin_popup .popup_container .popup_form {
-  border: solid green;
   width: 70%;
-  margin-bottom: 4%;
+  padding-bottom: 5%;
 }
 
 /*Labels*/
@@ -287,6 +284,57 @@ button:active {
   padding: 1.5%;
   border-radius: 10px;
   background-color: #e3e0f3;
+}
+
+/*NAV APIS*/
+#signin_popup .popup_container .apis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  padding: 0%;
+}
+
+/*UL*/
+#signin_popup .popup_container .apis .apis_ul {
+  display: inherit;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+/*LI*/
+#signin_popup .popup_container .apis .apis_ul li {
+  margin: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 1%;
+}
+
+/*A*/
+#signin_popup .popup_container .apis .apis_ul li > a {
+  padding: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/*SPAN*/
+#signin_popup .popup_container .apis .apis_ul li > a > span {
+  font-size: .8em;
+  padding: 0;
+}
+
+/*EFFECTS*/
+/*LI & A HOVER EFFECT*/
+#signin_popup .popup_container .apis .apis_ul li:hover {
+  background-color: #03a773;
+  -webkit-transform: scaleX(1.05);
+          transform: scaleX(1.05);
+  border: none;
 }
 
 /*---------MAIN----------*/

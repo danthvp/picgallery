@@ -199,12 +199,12 @@ p {
   transition: all .4s ease-in-out;
 }
 
-#head .head-div_menu .menu li:hover {
+/*#head .head-div_menu .menu li:hover {
   transform: scale(1.08);
   transition: 400ms;
   background: linear-gradient(-45deg, #340194, $violet, $green);
   border: none;
-}
+}*/
 
 /*-----A-----*/
 
@@ -257,7 +257,7 @@ p {
   z-index: 3;
   padding-top: 3%;
 
-  
+  cursor: default;  
 }
 
 
@@ -279,7 +279,7 @@ p {
 
   height: 70%;
   width: 35%;
-  padding: 0;
+  padding-bottom: 2.5%;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -291,19 +291,16 @@ p {
 #signin_popup .popup_container h3 {
   color: $white;
   font-size: 2em;
-  margin-bottom: 1%;
+  padding-bottom: .5%;
 }
 
 
 
 
 /*FORM*/
-
-
 #signin_popup .popup_container .popup_form{
-  border: solid green;
   width: 70%;
-  margin-bottom: 4%;
+  padding-bottom: 5%;
 }
 
 /*Labels*/
@@ -324,6 +321,60 @@ p {
 }
 
 
+
+/*NAV APIS*/
+#signin_popup .popup_container .apis {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 80%;
+  padding: 0%;
+}
+
+
+
+/*UL*/
+
+#signin_popup .popup_container .apis .apis_ul {
+  display: inherit;
+  justify-content: space-around;
+  width: 100%;
+}
+
+
+
+/*LI*/
+#signin_popup .popup_container .apis .apis_ul li {
+  margin: 0;
+  width: max-content;
+  padding: 0 1%; 
+}
+
+
+
+/*A*/
+#signin_popup .popup_container .apis .apis_ul li>a {
+  padding: 0;
+  width: max-content;
+}
+
+/*SPAN*/
+#signin_popup .popup_container .apis .apis_ul li>a>span {
+  font-size: .8em;
+  padding: 0;
+} 
+
+
+
+/*EFFECTS*/
+
+
+/*LI & A HOVER EFFECT*/
+#signin_popup .popup_container .apis .apis_ul li:hover{
+  background-color: #03a773;
+  transform: scaleX(1.05);
+  border: none;
+}
 
 
 
